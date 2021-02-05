@@ -1,0 +1,282 @@
+/*
+* ===========
+* DEFINITIONS
+* ===========
+*/
+@font-face {
+  font-family: "Neue Montreal";
+  src: url("./fonts/neuemontreal-thin.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Neue Montreal";
+  src: url("./fonts/neuemontreal-regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Neue Montreal";
+  src: url("./fonts/neuemontreal-medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Neue Montreal";
+  src: url("./fonts/neuemontreal-bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+/*
+* ========
+* SITEWIDE
+* ========
+*/
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Neue Montreal", Helvetica, Ariel, sans-serif;
+  font-size: 2em;
+  font-weight: 100;
+  color: #9E9E9E;
+  background-color: #E5E5E5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+button {
+  display: inline-block;
+  padding: 15px 32px;
+  margin: 4px 2px;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  color: #2F2F2F;
+  background-color: #F5B750;
+  cursor: pointer;
+}
+
+address {
+  font-style: normal;
+}
+address .email-cta {
+  font-weight: bold;
+  font-size: 1em;
+  color: #F5B750;
+}
+
+q {
+  font-style: italic;
+}
+
+/* Containers */
+.container-eyeline {
+  padding-top: 33vh;
+}
+
+.container-title-card {
+  height: 100vh;
+  width: 100vw;
+}
+
+.container-headline {
+  font-size: 1em;
+}
+
+/* padding around all content */
+.container {
+  position: relative;
+  min-height: 100vh;
+  text-align: center;
+}
+.container > div {
+  padding: 20px 30px;
+}
+
+/* Headings */
+.heading-big {
+  color: #F5B750;
+  margin: 0;
+}
+
+.projects-headline {
+  font-size: 3em;
+  text-transform: uppercase;
+  color: #CCCCCC;
+}
+
+.sub-title {
+  font-size: 1em;
+  font-weight: 500;
+}
+
+.heading-project-title {
+  font-size: 2em;
+}
+
+/* Text */
+.text-accented {
+  font-weight: bold;
+}
+
+/* For the menu items */
+.big-link {
+  font-weight: 500;
+}
+
+.big-link:hover, .big-link:focus {
+  /* make it white on hover */
+  filter: brightness(0) invert(1);
+  cursor: pointer;
+  cursor: url("./assets/icons/x-cursor.svg") 16 16, auto;
+}
+
+.important-link {
+  font-size: 2em;
+  font-weight: bold;
+  color: #2F2F2F;
+}
+
+.menu-icon {
+  height: 48px;
+  width: 48px;
+  content: url("./assets/icons/closed-menu.svg");
+}
+
+.social-media-icons {
+  text-align: center;
+}
+
+/* header shown on pages navigating away from main/home menu */
+.site-header {
+  position: fixed;
+  z-index: 1;
+  width: 100vw;
+  padding: 0 30px;
+}
+.site-header .main-menu-closed {
+  float: right;
+  margin: 0 30px;
+}
+
+.site-footer {
+  display: none;
+}
+
+/*
+* ========
+* PAGES
+* ========
+*/
+.container-contrast {
+  background-color: #282828;
+}
+
+.header-site-title {
+  margin-bottom: 10vh;
+}
+
+.heading-site-title {
+  text-transform: uppercase;
+}
+
+.container-project-preview {
+  margin: 50vh 0;
+}
+
+/* Project Images */
+.container-project-image {
+  object-fit: cover;
+  width: 100%;
+  min-width: 250px;
+  margin: 0 auto;
+}
+
+#image-granular-synthesizer {
+  max-height: 384px;
+  max-width: 727px;
+  content: url("images/granular-synthesizer.png");
+}
+
+#image-hardware-step-sequencer {
+  max-height: 385px;
+  max-width: 1078px;
+  content: url("images/hardware-step-sequencer.png");
+}
+
+#image-super-map-control {
+  max-height: 386px;
+  max-width: 707px;
+  content: url("images/super-map-control.png");
+}
+
+/*
+* ========
+* ELEMENTS
+* ========
+*/
+h1 {
+  font-size: 4em;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: inherit;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/*
+* ==========
+* ANIMATIONS
+* ==========
+*/
+.fadein-on-load {
+  /* Animate Fade out of title text */
+  animation-name: fadein;
+  animation-duration: calc(3s/3);
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.fadeout-on-delay {
+  /* Animate Fade out of title text */
+  animation-name: fadeout;
+  animation-delay: calc(3s - 1s);
+  animation-duration: calc(3s/3);
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeout {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

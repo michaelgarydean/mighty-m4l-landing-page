@@ -1,0 +1,344 @@
+$root_path: './';
+$assets_path: $root_path + 'assets/';
+
+$cursor_icon: $assets_path + 'icons/x-cursor.svg';
+$menu_icon: $assets_path + 'icons/closed-menu.svg';
+
+$menu_icon_size: 48px;
+
+$side_margin_outer: 30px;
+$vertical_margin_outer: 20px;
+
+$side_margin_inner: $menu_icon_size + $side_margin_outer;
+
+$intro_animation_length: 3s;
+
+$font_color_main: #9E9E9E;
+$font_color_secondary: #2F2F2F;
+$font_color_light: #CCCCCC;
+$font_color_accent: #F5B750;
+
+$font_color_hover: #FFFFFF;
+
+$background_color_main: #E5E5E5;
+$background_color_contrast: #282828;
+
+/*
+* ===========
+* DEFINITIONS
+* ===========
+*/
+
+@font-face {
+	font-family: "Neue Montreal";
+	src: url($root_path + "fonts/neuemontreal-thin.woff") format("woff");
+  	font-weight: 100;
+  	font-style: normal;
+}
+
+@font-face {
+	font-family: "Neue Montreal";
+	src: url($root_path + "fonts/neuemontreal-regular.woff") format("woff");
+  	font-weight: normal;
+  	font-style: normal;
+}
+
+@font-face {
+	font-family: "Neue Montreal";
+	src: url($root_path + "fonts/neuemontreal-medium.woff") format("woff");
+  	font-weight: 500;
+  	font-style: normal;
+}
+
+@font-face {
+	font-family: "Neue Montreal";
+	src: url($root_path + "fonts/neuemontreal-bold.woff") format("woff");
+  	font-weight: bold;
+  	font-style: normal;
+}
+
+/*
+* ========
+* SITEWIDE
+* ========
+*/
+
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+	font-family: "Neue Montreal", Helvetica, Ariel, sans-serif;
+	font-size: 2em;
+	font-weight: 100;
+	color: $font_color_main;
+
+	background-color: $background_color_main;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+button {
+  display: inline-block;
+
+  padding: 15px 32px;
+  margin: 4px 2px;
+
+  border: none;
+
+  text-align: center;
+  text-decoration: none;
+  
+  color: $font_color_secondary;
+  background-color: $font_color_accent;
+
+  cursor: pointer;
+
+}
+
+address {
+	font-style: normal;
+
+	.email-cta {
+		font-weight: bold;
+		font-size: 1em;
+		color: $font_color_accent;
+	}
+}
+
+q {
+	font-style: italic;
+}
+
+/* Containers */
+.container-eyeline {
+	padding-top: 33vh;
+}
+
+.container-title-card {
+	height: 100vh;
+	width: 100vw;
+}
+
+.container-headline {
+	font-size: 1em;
+}
+
+/* padding around all content */
+.container {
+	position: relative;
+	min-height: 100vh;
+
+	text-align: center;
+
+	> div {
+
+		padding: $vertical_margin_outer $side_margin_outer;
+	}
+}
+
+/* Headings */
+.heading-big {
+	color: $font_color_accent;
+	margin: 0;
+}
+
+.projects-headline {
+	font-size: 3em;
+	text-transform: uppercase;
+	color: $font_color_light
+}
+
+.sub-title {
+	font-size: 1em;
+	font-weight: 500;
+}
+
+.heading-project-title {
+	font-size: 2em;
+}
+
+/* Text */
+.text-accented {
+	font-weight: bold;
+}
+
+.text-credit {
+
+}
+
+
+
+
+/* For the menu items */
+.big-link {
+	font-weight: 500;
+}
+
+.big-link:hover, .big-link:focus {
+
+	/* make it white on hover */
+	filter: brightness(0) invert(1);
+
+  	cursor: pointer;
+  	cursor: url($cursor_icon) 16 16,  auto;
+}
+
+.important-link {
+	font-size: 2em;
+	font-weight: bold;
+	color: $font_color_secondary;
+}
+
+.menu-icon {
+    height: $menu_icon_size;
+    width: $menu_icon_size;
+
+	content: url($menu_icon);
+}
+
+
+.social-media-icons {
+  text-align: center;
+}
+
+/* header shown on pages navigating away from main/home menu */
+.site-header {
+	position: fixed;
+	z-index: 1;
+
+	width: 100vw;
+	padding: 0 $side_margin_outer;
+
+	.main-menu-closed {
+
+		float: right;
+		margin: 0 $side_margin_outer;
+	}
+}
+
+.site-footer {
+	display: none;
+}
+
+/*
+* ========
+* PAGES
+* ========
+*/
+
+.container-contrast {
+	background-color: $background_color_contrast;
+}
+
+.header-site-title {
+	margin-bottom: 10vh;
+}
+
+.heading-site-title {
+	text-transform: uppercase;
+}
+
+.container-project-preview {
+	margin: 50vh 0;
+}
+
+.container-project-description {
+}
+
+/* Project Images */
+.container-project-image {
+	object-fit: cover;
+	width: 100%;
+	min-width: 250px;
+
+	margin: 0 auto;
+}
+
+#image-granular-synthesizer {
+	max-height: 384px;
+	max-width: 727px;
+
+	content: url("images/granular-synthesizer.png");
+}
+
+#image-hardware-step-sequencer {
+	max-height: 385px;
+	max-width: 1078px;
+
+	content: url("images/hardware-step-sequencer.png");
+}
+
+#image-super-map-control {
+	max-height: 386px;
+	max-width: 707px;
+
+	content: url("images/super-map-control.png");
+
+}
+
+
+/*
+* ========
+* ELEMENTS
+* ========
+*/
+
+
+
+h1 {
+	font-size: 4em;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+
+	list-style-type: none;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+	cursor: inherit;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+/*
+* ==========
+* ANIMATIONS
+* ==========
+*/
+
+.fadein-on-load {
+	/* Animate Fade out of title text */
+	animation-name: fadein;
+ 	animation-duration: calc(#{$intro_animation_length}/3);
+ 	animation-timing-function: ease-in-out;
+ 	animation-fill-mode: forwards;
+}
+
+.fadeout-on-delay {
+	/* Animate Fade out of title text */
+	animation-name: fadeout;
+ 	animation-delay: calc(#{$intro_animation_length} - #{$intro_animation_length/3});
+ 	animation-duration: calc(#{$intro_animation_length}/3);
+ 	animation-timing-function: ease-in-out;
+ 	animation-fill-mode: forwards;
+}
+
+@keyframes fadeout {
+    from 	{ opacity: 1; }
+    to 		{ opacity: 0; }
+}
+
+@keyframes fadein {
+    from 	{ opacity: 0; }
+    to   	{ opacity: 1; }
+}

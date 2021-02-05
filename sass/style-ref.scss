@@ -1,0 +1,400 @@
+$root_path: './';
+$assets_path: $root_path + 'assets/';
+
+$cursor_icon: $assets_path + 'icons/x-cursor.svg';
+$menu_icon: $assets_path + 'icons/closed-menu.svg';
+
+$menu_icon_size: 48px;
+
+$side_margin_outer: 30px;
+$vertical_margin_outer: 20px;
+
+$side_margin_inner: $menu_icon_size + $side_margin_outer;
+
+$intro_animation_length: 3s;
+
+$font_color: #D3D3D3;
+$font_secondary_color: #383838;
+$hover_color: #FFFFFF;
+$background_color: #0B0B0B;
+
+/*
+* ===========
+* DEFINITIONS
+* ===========
+*/
+
+@font-face {
+	font-family: "Neue Montreal";
+	src: url($root_path + "fonts/neuemontreal-thin.woff") format("woff");
+  	font-weight: 100;
+  	font-style: normal;
+}
+
+@font-face {
+	font-family: "Neue Montreal";
+	src: url($root_path + "fonts/neuemontreal-regular.woff") format("woff");
+  	font-weight: normal;
+  	font-style: normal;
+}
+
+@font-face {
+	font-family: "Neue Montreal";
+	src: url($root_path + "fonts/neuemontreal-medium.woff") format("woff");
+  	font-weight: 500;
+  	font-style: normal;
+}
+
+@font-face {
+	font-family: "Neue Montreal";
+	src: url($root_path + "fonts/neuemontreal-bold.woff") format("woff");
+  	font-weight: bold;
+  	font-style: normal;
+}
+
+/*
+* ========
+* SITEWIDE
+* ========
+*/
+
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+	font-family: "Neue Montreal", Helvetica, Ariel, sans-serif;
+	color: $font_color;
+
+	background-color: $background_color;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+* p:first-of-type {
+	margin-top: 0
+}
+
+* p:last-of-type {
+	margin-bottom: 0
+}
+
+
+/* padding around all content */
+.container {
+	position: relative;
+	padding: $vertical_margin_outer $side_margin_outer;
+
+	/* Full viewport, minus the margin/padding and the footer*/
+	/*min-height: calc(100vh - #{$vertical_margin_outer}*2);*/
+	min-height: 100vh;
+}
+
+/* For the menu items */
+.big-link {
+	font-weight: 500;
+}
+
+.big-link:hover, .big-link:focus {
+
+	/* make it white on hover */
+	filter: brightness(0) invert(1);
+
+  	cursor: pointer;
+  	cursor: url($cursor_icon) 16 16,  auto;
+}
+
+.important-link {
+	font-size: 2em;
+	font-weight: bold;
+	color: $font_secondary_color;
+}
+
+.menu-icon {
+    height: $menu_icon_size;
+    width: $menu_icon_size;
+
+	content: url($menu_icon);
+}
+
+
+.social-media-icons {
+  text-align: center;
+}
+
+/* header shown on pages navigating away from main/home menu */
+.site-header {
+	position: fixed;
+	z-index: 1;
+
+	width: 100vw;
+	padding: 0 $side_margin_outer;
+
+	.main-menu-closed {
+
+		float: right;
+		margin: 0 $side_margin_outer;
+	}
+}
+
+.site-footer {
+	display: none;
+}
+
+
+/*
+* ========
+* PAGES
+* ========
+*/
+
+/* Vertically center the div containing the centered flex box */
+.centered-parent {	
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+}
+
+
+/* Vertically centered content using flex box */
+.centered-container {
+
+	display: flex;
+  	flex-wrap: wrap;
+    flex-direction:column;
+
+	align-items: center;
+	justify-content: center;
+
+	/* 
+	 * PAGE: Homepage title text 
+	 */
+	.landing-page-header {
+
+		text-align: center;
+
+		h1 {
+	    	display: inline; 
+
+			font-size: 4em;
+			font-weight: 500;
+			line-height: 1.1em;
+		}
+
+		span {
+			display: block;
+			color: $font_secondary_color;
+			font-size: 2em;
+    		font-weight: 100;
+    		line-height: 1.5em;
+		}
+	}
+
+
+	/* 
+	 * PAGE: The main menu
+	 */
+	.main-menu-home {
+		font-size: 6em;
+		font-weight: bold;
+		line-height: 1.1em;
+
+		text-align: center;
+	}
+
+	.sub-menu-item {
+		margin: 2em 0;
+		font-weight: 500;
+	}
+
+	/* 
+	 * PAGE: About page large centered text 
+	 */
+	.large-centered-text {
+		padding: 0 $side_margin_inner;
+
+		font-size: 3em;
+		text-align: center;
+	}
+
+	/*
+	 * PAGE: Teaching timeline
+	 */
+
+	 .timeline, .timeline-large {
+
+		margin: 100px 0; /* Vertical spacing of timeline from other elements */
+
+	 	.timeline-entry {
+	 		font-size: 1em;
+
+	 		display: flex;
+		    flex-direction: row;
+		    align-items: baseline;
+
+	 		div {
+	 		}
+
+		 	h1, p {
+		 		display: inline;
+		 		font-size: inherit;
+		 	}
+
+		 	.timeline-date {
+		 		min-width: $vertical_margin_outer*4; 
+		 		max-width: $vertical_margin_outer*4; 
+		 	}
+
+		 	.timeline-content {
+		 		    border-left-style: solid;
+				    border-left-width: 1px;
+				    border-left-color: #707070;
+
+				    padding: $side_margin_outer/2 $vertical_margin_outer*2;
+		 	}
+	 	}
+
+
+		.timeline-entry:first-child {
+		 	.timeline-content {
+				    padding-top: 0px;
+		 	}
+		}
+
+		.timeline-entry:last-child {
+		 	.timeline-content {
+				    padding-bottom: 0px;
+		 	}
+		}
+
+	 }
+
+	 .timeline-large {
+
+		margin: 200px 0; /* Vertical spacing of timeline from other elements */
+
+	 	.timeline-entry {
+
+	 		.timeline-date, .timeline-content {
+
+	 			font-size: 8em;
+    			padding-bottom: 3em;
+    			line-height: 0.9em;
+	 		}
+
+	 		.timeline-date {
+		 		min-width: $vertical_margin_outer*20; 
+		 		max-width: $vertical_margin_outer*20; 
+
+	 		}
+
+	 		.timeline-content {
+
+	 			.timeline-item {
+
+	 				h1, span, p {
+	 					display: block;
+	 					margin: 0;
+	 				}
+
+	 				h1 {
+	 				}
+
+	 				span {
+	 					font-size: 0.5em;
+	 					color: $font_secondary_color;
+	 					line-height: 1em;
+    					margin: 0.25em 0;
+
+	 				}
+
+	 				p {
+
+	 					font-size: 0.25em;
+	 					line-height: 1.25em;
+	 					font-weight: 100;
+	 					letter-spacing: 0.02em;
+	 					margin-top:0.75em;
+	 				}
+
+	 			}
+
+	 		}
+	 	}
+	 }
+
+}
+
+/*
+ * PAGE: EXPERIMENTS
+ */
+
+.experiment-container {
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	.glcanvas {
+		width: 100vw;
+		height: 100vh; 
+		tabindex: 1;
+	}
+}
+
+
+/*
+* ========
+* ELEMENTS
+* ========
+*/
+
+ul {
+	margin: 0;
+	padding: 0;
+
+	list-style-type: none;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+	cursor: inherit;
+}
+
+/*
+* ==========
+* ANIMATIONS
+* ==========
+*/
+
+.fadein-on-load {
+	/* Animate Fade out of title text */
+	animation-name: fadein;
+ 	animation-duration: calc(#{$intro_animation_length}/3);
+ 	animation-timing-function: ease-in-out;
+ 	animation-fill-mode: forwards;
+}
+
+.fadeout-on-delay {
+	/* Animate Fade out of title text */
+	animation-name: fadeout;
+ 	animation-delay: calc(#{$intro_animation_length} - #{$intro_animation_length/3});
+ 	animation-duration: calc(#{$intro_animation_length}/3);
+ 	animation-timing-function: ease-in-out;
+ 	animation-fill-mode: forwards;
+}
+
+@keyframes fadeout {
+    from 	{ opacity: 1; }
+    to 		{ opacity: 0; }
+}
+
+@keyframes fadein {
+    from 	{ opacity: 0; }
+    to   	{ opacity: 1; }
+}
