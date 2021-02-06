@@ -124,6 +124,11 @@ q {
   font-weight: bold;
 }
 
+/* Mailchimp */
+.mc-field-group, .mce-responses, .clear {
+  display: inline;
+}
+
 /* For the menu items */
 .big-link {
   font-weight: 500;
