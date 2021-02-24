@@ -267,6 +267,24 @@ address {
 	display: none;
 }
 
+/* Media Queries */
+@media (max-width: 575.98px) { 
+
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+}
+
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) { 
+}
+
+/* Large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) {
+
+}
+
 /*
 * ========
 * PAGES
@@ -283,6 +301,7 @@ address {
 
 .heading-site-title {
 	text-transform: uppercase;
+	line-height: 1em;
 }
 
 .container-project-preview {
@@ -320,6 +339,52 @@ address {
 	max-width: 707px;
 
 	content: url("images/super-map-control.png");
+
+}
+
+/* Media Queries */
+@media (max-width: 575.98px) { 
+
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+	.heading-site-title {
+	    font-size: calc(12px + 20vw);
+	}
+
+	.projects-headline {
+	    font-size: calc(12px + 10vw);
+	    display: none;
+	}
+
+	.container-project-preview {
+   		margin: 10vh 0;
+	}
+
+	.heading-project-title {
+    	font-size: 1em;
+	}
+
+	.container-project-description {
+		font-size: 0.75em;
+	}
+
+	.heading-big {
+    	font-size: 2em;
+	}
+
+	.container-footer {
+		font-size: 0.75em;
+	}
+}
+
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) { 
+}
+
+/* Large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) {
 
 }
 
