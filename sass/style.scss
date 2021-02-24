@@ -59,7 +59,7 @@ $background_color_contrast: #282828;
 
 /*
 * ========
-* SITEWIDE
+* ELEMENTS
 * ========
 */
 
@@ -99,6 +99,46 @@ button {
 
 }
 
+
+
+h1 {
+	font-size: 4em;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+
+	list-style-type: none;
+}
+
+a {
+	text-decoration: underline;
+	color: inherit;
+	cursor: inherit;
+}
+
+a:hover {
+	opacity: 0.25;
+	cursor: pointer;
+}
+
+q {
+	font-style: italic;
+}
+
+/*
+* ========
+* SITEWIDE
+* ========
+*/
+
+
+.button-cta > .email-cta {
+
+		text-decoration: none;
+}
+
 address {
 	font-style: normal;
 
@@ -107,10 +147,6 @@ address {
 		font-size: 1em;
 		color: $font_color_accent;
 	}
-}
-
-q {
-	font-style: italic;
 }
 
 /* Containers */
@@ -285,37 +321,6 @@ q {
 
 	content: url("images/super-map-control.png");
 
-}
-
-
-/*
-* ========
-* ELEMENTS
-* ========
-*/
-
-
-
-h1 {
-	font-size: 4em;
-}
-
-ul {
-	margin: 0;
-	padding: 0;
-
-	list-style-type: none;
-}
-
-a {
-	text-decoration: underline;
-	color: inherit;
-	cursor: inherit;
-}
-
-a:hover {
-	opacity: 0.25;
-	cursor: pointer;
 }
 
 /*
