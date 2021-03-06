@@ -49,18 +49,6 @@ body {
   box-sizing: border-box;
 }
 
-button {
-  display: inline-block;
-  padding: 15px 32px;
-  margin: 4px 2px;
-  border: none;
-  text-align: center;
-  text-decoration: none;
-  color: #2F2F2F;
-  background-color: #F5B750;
-  cursor: pointer;
-}
-
 h1 {
   font-size: 4em;
 }
@@ -84,6 +72,43 @@ a:hover {
 
 q {
   font-style: italic;
+}
+
+button {
+  display: inline-block;
+  padding: 15px 32px;
+  margin: 4px 2px;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  color: #2F2F2F;
+  background-color: #F5B750;
+  cursor: pointer;
+}
+
+/* Mailchimp form */
+input[type=submit] {
+  display: inline-block;
+  padding: 5px 10px;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  color: #2F2F2F;
+  background-color: #9e9e9e;
+  cursor: pointer;
+}
+
+input[type=email] {
+  display: inline-block;
+  padding: 4px 2px;
+  margin: 0 -4px;
+  border: none;
+  /* text-align: center; */
+  text-decoration: none;
+  color: #484646;
+  background-color: #282828;
+  /* cursor: pointer; */
+  border-bottom: 1px solid #484646;
 }
 
 /*
