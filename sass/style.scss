@@ -133,7 +133,7 @@ input[type="submit"] {
     text-align: center;
     text-decoration: none;
     color: $font_color_secondary;
-    background-color: #9e9e9e;
+    background-color: $font_color_main;
     cursor: pointer;
 }
 
@@ -144,10 +144,21 @@ display: inline-block;
     border: none;
     /* text-align: center; */
     text-decoration: none;
-    color: #484646;
+    color: $font_color_main;
     background-color: $background_color_contrast;
-    /* cursor: pointer; */
-    border-bottom: 1px solid #484646;
+    border-bottom: 1px solid $font_color_main;
+}
+
+#mc_embed_signup div.mce_inline_error {
+    margin: 0 0 1em 0;
+    padding: 5px 10px;
+    font-size: 0.5em;
+    z-index: 1;
+    color: $font_color_accent;
+}
+
+#mc_embed_signup input.mce_inline_error {
+    border-color: $font_color_accent;
 }
 
 /*
