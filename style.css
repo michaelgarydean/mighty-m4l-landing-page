@@ -302,6 +302,11 @@ address .email-cta {
   margin: 50vh 0;
 }
 
+.container-project-description {
+  width: 70%;
+  margin: 0 auto;
+}
+
 /* Project Images */
 .container-project-image {
   object-fit: cover;
@@ -366,6 +371,11 @@ address .email-cta {
   }
 }
 /* Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+  .container-project-description {
+    width: 100%;
+  }
+}
 /* Large devices (desktops, less than 1200px) */
 /*
 * ==========

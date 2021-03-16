@@ -381,6 +381,8 @@ address {
 }
 
 .container-project-description {
+	width: 70%;
+    margin: 0 auto;
 }
 
 /* Project Images */
@@ -458,6 +460,9 @@ address {
 
 /* Medium devices (tablets, less than 992px) */
 @media (max-width: 991.98px) { 
+	.container-project-description {
+		width: 100%;
+	}
 }
 
 /* Large devices (desktops, less than 1200px) */
