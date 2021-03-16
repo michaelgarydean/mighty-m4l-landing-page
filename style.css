@@ -131,6 +131,10 @@ input[type=email] {
   text-decoration: none;
 }
 
+.button-cta {
+  font-weight: bold;
+}
+
 address {
   font-style: normal;
 }
@@ -188,6 +192,7 @@ address .email-cta {
 
 .sub-title {
   font-weight: 500;
+  display: inline-block;
 }
 
 .container-footer-title-card .sub-title {
@@ -384,6 +389,21 @@ address .email-cta {
   animation-fill-mode: forwards;
 }
 
+.fade-up-0 {
+  opacity: 0%;
+  animation: 0.75s ease-in-out 0s 1 forwards smallFadeup;
+}
+
+.fade-up-1 {
+  opacity: 0%;
+  animation: 0.75s ease-in-out 0.075s 1 forwards smallFadeup;
+}
+
+.fade-up-2 {
+  opacity: 0%;
+  animation: 0.75s ease-in-out 0.19s 1 forwards smallFadeup;
+}
+
 @keyframes fadeout {
   from {
     opacity: 1;
@@ -398,6 +418,18 @@ address .email-cta {
   }
   to {
     opacity: 1;
+  }
+}
+@keyframes smallFadeup {
+  0% {
+    transform: translateY(3vh);
+    opacity: 0%;
+    filter: blur(1px);
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 100%;
+    filter: blur(0px);
   }
 }
 

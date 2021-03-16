@@ -173,6 +173,10 @@ display: inline-block;
 		text-decoration: none;
 }
 
+.button-cta {
+	font-weight: bold;
+}
+
 address {
 	font-style: normal;
 
@@ -238,6 +242,7 @@ address {
 
 .sub-title {
 	font-weight: 500;
+	display: inline-block;
 }
 
 .container-footer-title-card {
@@ -483,6 +488,22 @@ address {
  	animation-fill-mode: forwards;
 }
 
+.fade-up-0 {
+
+    opacity: 0%;
+  	animation: 0.75s ease-in-out 0s 1 forwards smallFadeup;
+}
+
+.fade-up-1 {
+    opacity: 0%;
+  	animation: 0.75s ease-in-out 0.075s 1 forwards smallFadeup;
+}
+
+.fade-up-2 {
+    opacity: 0%;
+  	animation: 0.75s ease-in-out 0.19s 1 forwards smallFadeup;
+}
+
 @keyframes fadeout {
     from 	{ opacity: 1; }
     to 		{ opacity: 0; }
@@ -491,4 +512,17 @@ address {
 @keyframes fadein {
     from 	{ opacity: 0; }
     to   	{ opacity: 1; }
+}
+
+@keyframes smallFadeup {
+  0% {
+    transform: translateY(3vh);
+    opacity: 0%;
+    filter: blur(1px);
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 100%;
+    filter: blur(0px);
+  }
 }
