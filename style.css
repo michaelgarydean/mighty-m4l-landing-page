@@ -298,6 +298,10 @@ address .email-cta {
   line-height: 1em;
 }
 
+.heading-layer-1 {
+  position: absolute;
+}
+
 .container-project-preview {
   margin: 50vh 0;
 }
@@ -401,17 +405,17 @@ address .email-cta {
 
 .fade-up-0 {
   opacity: 0%;
-  animation: 0.75s ease-in-out 0s 1 forwards smallFadeup;
+  animation: 0.75s ease-out 0s 1 forwards smallFadeup;
 }
 
 .fade-up-1 {
   opacity: 0%;
-  animation: 0.75s ease-in-out 0.075s 1 forwards smallFadeup;
+  animation: 0.75s ease-out 0.075s 1 forwards smallFadeup;
 }
 
 .fade-up-2 {
   opacity: 0%;
-  animation: 0.75s ease-in-out 0.19s 1 forwards smallFadeup;
+  animation: 0.75s ease-out 0.19s 1 forwards smallFadeup;
 }
 
 @keyframes fadeout {
