@@ -429,6 +429,14 @@ address {
 /* Media Queries */
 @media (max-width: 575.98px) { 
 
+	.heading-big {
+    	font-size: 2em;
+	}
+
+	.heading-footer {
+    	font-size: 2em;
+	}
+
 }
 
 /* Small devices (landscape phones, less than 768px) */
@@ -443,7 +451,7 @@ address {
 	}
 
 	.container-project-preview {
-   		margin: 10vh 0;
+   		margin: 30vh 0;
 	}
 
 	.heading-project-title {
@@ -455,7 +463,11 @@ address {
 	}
 
 	.heading-big {
-    	font-size: 2em;
+    	font-size: 3em;
+	}
+
+	.heading-footer {
+    	font-size: 3em;
 	}
 
 	.container-footer {
