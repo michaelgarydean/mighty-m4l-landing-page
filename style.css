@@ -45,6 +45,10 @@ body {
   background-color: #E5E5E5;
 }
 
+p {
+  line-height: 1.25em;
+}
+
 * {
   box-sizing: border-box;
 }
