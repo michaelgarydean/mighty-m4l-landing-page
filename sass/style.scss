@@ -192,6 +192,12 @@ address {
 }
 
 /* Containers */
+
+.container {
+	background-image: url("images/lisbon-music-setup.jpg");
+	background-size:cover;
+	background-position:center;
+}
 .container-eyeline {
 }
 
@@ -217,7 +223,7 @@ address {
 .container-site-title {
 
 
-    margin-top: 27vh;
+    margin-top: 30vh;
 }
 
 .button-cta {
@@ -377,7 +383,7 @@ address {
 */
 
 .container-contrast {
-	background-color: $background_color_contrast;
+	/* background-color: $background_color_contrast; */
 }
 
 .header-site-title {

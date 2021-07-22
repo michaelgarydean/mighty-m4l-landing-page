@@ -149,6 +149,12 @@ address .email-cta {
 }
 
 /* Containers */
+.container {
+  background-image: url("assets/images/lisbon-music-setup.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
 .container-title-card {
   min-height: 100vh;
   flex-direction: column;
@@ -168,7 +174,7 @@ address .email-cta {
 }
 
 .container-site-title {
-  margin-top: 27vh;
+  margin-top: 30vh;
 }
 
 .button-cta {
@@ -297,7 +303,7 @@ address .email-cta {
 * ========
 */
 .container-contrast {
-  background-color: #282828;
+  /* background-color: $background_color_contrast; */
 }
 
 .header-site-title {
