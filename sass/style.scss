@@ -197,7 +197,6 @@ address {
 
 .container-title-card {
 	min-height: 100vh;
-    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -213,6 +212,16 @@ address {
 	p {
 		margin: 0 auto;
 	}
+}
+
+.container-site-title {
+
+
+    margin-top: 27vh;
+}
+
+.button-cta {
+	margin-top: 5vh;
 }
 
 /* padding around all content */
