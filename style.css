@@ -150,7 +150,7 @@ address .email-cta {
 
 /* Containers */
 .container {
-  background-image: url("assets/images/lisbon-music-setup.jpg");
+  background-image: url("images/lisbon-music-setup.jpg");
   background-size: cover;
   background-position: center;
 }
